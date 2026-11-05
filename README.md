@@ -24,6 +24,24 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - v určitých metrech se zobrazí na displeji čára (jako obrubník) (threshold alarm)
 - v určitých metrech to začne pípat
 - přepínání jednotek vzdálenosti
+- korekce měření pomocí teploměru BME 280
 
+## PINS
+### Ultrasonic distance sensor HC-SR04:
+- VCC
+- Trig
+- Echo
+- GND
+
+### Buzzer HW-508 V0.2:
+- S (Signal)
+- VCC
+- GND
+
+### Display 128x64 SH1106 I2C OLED:
+- SDA
+- SCK
+- VCC
+- GND
 
 ![Demonstrační schéma funkce](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/6e5251d79234658754d98f332dfdd26f5b788422/car%20sensor.png)
