@@ -6,18 +6,18 @@ peak/minimum tracking,
 or a simple parking-distance display. 
 Check the sensor's echo voltage and use a divider or level shifter if required.
 
-Team members:
+## Team members:
 - David Latzka
 - Dominik pitrun
 - Vojtěch Smerekovský
 
-Electronic components:
+## Electronic components:
 - Raspberry Pi Pico
 - OLED display
 - Ultrasonic-distance senzor
 - buzzer/speaker
 
-features:
+## Features:
 - distance measure
 - parking display
 - v určitých metrech se zobrazí na displeji čára (jako obrubník) (threshold alarm)
