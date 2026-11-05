@@ -25,4 +25,4 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - přepínání jednotek vzdálenosti
 
 
-![Demonstrační schéma funkce]((https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/6e5251d79234658754d98f332dfdd26f5b788422/car%20sensor.png).png)
+![Demonstrační schéma funkce]((https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/6e5251d79234658754d98f332dfdd26f5b788422/car%20sensor.png)
