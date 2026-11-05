@@ -22,4 +22,4 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - parking display
 - v určitých metrech se zobrazí na displeji čára (jako obrubník) (threshold alarm)
 - v určitých metrech to začne pípat
-- přepínání jednotek vzdálenosti
+- přepínání jednotek vzdálenosti }
