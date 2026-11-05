@@ -16,6 +16,7 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - OLED display
 - Ultrasonic-distance senzor
 - buzzer/speaker
+jftrydrydr
 
 ## Features:
 - distance measure
