@@ -8,7 +8,7 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ## Team members:
 - David Latzka
-- Dominik pitrun
+- Dominik Pitrun
 - Vojtěch Smerekovský
 
 ## Electronic components:
