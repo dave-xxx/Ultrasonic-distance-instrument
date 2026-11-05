@@ -7,16 +7,16 @@ or a simple parking-distance display.
 Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ## Team members:
-- David Latzka
-- Dominik Pitrun
-- Vojtěch Smerekovský
+- David Latzka: 
+- Dominik Pitrun: block diagram, pinouts
+- Vojtěch Smerekovský: Github editor
 
 ## Electronic components:
 - Raspberry Pi Pico
 - OLED display
 - Ultrasonic-distance senzor
 - buzzer/speaker
-jftrydrydr
+- tlačítko na přepínání jednotek
 
 ## Features:
 - distance measure
