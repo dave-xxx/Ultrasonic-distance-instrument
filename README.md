@@ -7,7 +7,7 @@ or a simple parking-distance display.
 Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ## Team members:
-- David Latzka: 
+- David Latzka: flowchart
 - Dominik Pitrun: block diagram, pinouts
 - Vojtěch Smerekovský: Github editor
 
@@ -43,6 +43,37 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - SCK
 - VCC
 - GND
+
+## Funkce
+### Sensor
+- v pravidelných intervalech snímá vzdálennost
+- vzdálenost zapíše do proměnné
+
+### Display
+- má rozsvícený display s čárami parking displeje
+- bere proměnnou o vzdálenosti a nechá ji vypsat na displej
+- upravuje vyplneni car podle vzdálenosti
+- místo pro zobrazení jednotek
+
+### Bzucak
+- bere proměnnou o vzdálenosti a podle toho pípá 
+- upravuje rychlost pípání podle vzdálenosti
+
+### Button
+- zmáčknutí tlačítka se přepnou jednotky (metry/palce), toto se nahraje i na displej
+
+
+## Work plan
+### Week 1
+- block diagram with pinouts (Dominik)
+- parking display (Vojtech)
+- drivers (Vojtech)
+- flowchart (David)
+- dsicrod skupina (Vojtech)
+
+### Week 2
+- codes for each component (display, sensor, piezo, button)
+- 
 
 ![Demonstrační schéma funkce](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/6e5251d79234658754d98f332dfdd26f5b788422/car%20sensor.png)
 
