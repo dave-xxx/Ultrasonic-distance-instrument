@@ -79,4 +79,4 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/block_diagram_temporary.png)
 
-![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/smajlik.png)
+![test](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/smajlik.png)
