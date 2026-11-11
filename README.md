@@ -78,3 +78,5 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 ![Demonstrační schéma funkce](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/6e5251d79234658754d98f332dfdd26f5b788422/car%20sensor.png)
 
 ![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/block_diagram_temporary.png)
+
+![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/smajlik.png)
