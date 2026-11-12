@@ -69,11 +69,12 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - parking display (Vojtech)
 - drivers (Vojtech)
 - flowchart (David)
-- dsicrod skupina (Vojtech)
+- discord skupina (Vojtech)
 
 ### Week 2
-- codes for each component (display, sensor, piezo, button)
-- 
+- code for display (Vojta)
+- code for measure distance (David)
+- buzzer ()
 
 ![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/block_diagram_temporary.png)
 
