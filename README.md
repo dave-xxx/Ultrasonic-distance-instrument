@@ -79,8 +79,11 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - code for measure distance (David)
 - buzzer ()
 
+## Flowchart
 ![flowchart](./main-program-flowchart-v1.0.svg)
 
+## Block diagram
 ![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/block_diagram_temporary.png)
 
+## Oled display
 ![reverse camera filled](./reverse_camera_filled.png)
