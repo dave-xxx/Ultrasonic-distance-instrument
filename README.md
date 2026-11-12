@@ -115,15 +115,8 @@ Výpočet: rychlost zvuku `c = 331,3 + 0,606 · T` (m/s, T ve °C), vzdálenost 
 | Tlačítko | vývod 1 | GP19 (pull-down) | 25 | tlačítko → Pico | Digital, řádek GP19 |
 | Tlačítko | vývod 2 | 3V3 OUT | 36 | napájení | Digital, řádek GP19 |
 
-
-
-
-
 ## Flowchart
 ![flowchart](./main-program-flowchart-v1.0.svg)
-
-## Block diagram
-![Blokové schéma s piny](https://github.com/dave-xxx/Ultrasonic-distance-instrument/blob/1acf169554ab39e37ba99871cb8f2bfcaa18266c/block_diagram_temporary.png)
 
 ## Oled display
 ![reverse camera filled](./reverse_camera_filled.png)
