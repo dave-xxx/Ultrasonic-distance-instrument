@@ -79,6 +79,46 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - code for measure distance (David)
 - buzzer ()
 
+## Hardware design
+
+### Blokové schéma
+
+![Blokové schéma](block_diagram.png)
+
+Pico W v pravidelném intervalu vyšle na HC-SR04 spouštěcí puls (Trig) a změří délku odezvy (Echo). Z délky pulzu a teploty z BME280 spočítá vzdálenost. Výsledek zobrazí na OLED displeji jako číslo a parkovací čáry a podle vzdálenosti mění rychlost pípání piezo bzučáku. Tlačítko přepíná jednotky metry / palce.
+
+Výpočet: rychlost zvuku `c = 331,3 + 0,606 · T` (m/s, T ve °C), vzdálenost `d = t · c / 2` (t = délka pulzu Echo).
+
+### Schéma zapojení
+
+![Schéma zapojení](wiring_diagram.png)
+
+### Zapojení pinů
+
+| Modul | Pin modulu | Pico W | Fyz. pin | Směr | Rozšiřující deska |
+|---|---|---|---|---|---|
+| OLED SH1106 | SDA | GP4 (I2C0 SDA) | 6 | obousměrně | lišta I2C0, D/4 |
+| OLED SH1106 | SCK | GP5 (I2C0 SCL) | 7 | Pico → OLED | lišta I2C0, C/5 |
+| OLED SH1106 | VCC | 3V3 OUT | 36 | napájení | lišta I2C0, 3V3 |
+| OLED SH1106 | GND | GND | 38 | zem | lišta I2C0, GND |
+| BME280 | SDA | GP4 (I2C0 SDA) | 6 | obousměrně | lišta I2C0, D/4 |
+| BME280 | SCL | GP5 (I2C0 SCL) | 7 | Pico → BME280 | lišta I2C0, C/5 |
+| BME280 | VIN | 3V3 OUT | 36 | napájení | lišta I2C0, 3V3 |
+| BME280 | GND | GND | 38 | zem | lišta I2C0, GND |
+| HC-SR04 | Trig | GP20 | 26 | Pico → senzor | Digital, řádek GP20 |
+| HC-SR04 | Echo | GP21 (přes dělič) | 27 | senzor → Pico | Digital, řádek GP21 |
+| HC-SR04 | Vcc | VBUS (5 V) | 40 | napájení | lišta vedle Pica, VBUS |
+| HC-SR04 | Gnd | GND | 28 | zem | Digital, GND |
+| Piezo HW-508 | S | GP22 (PWM) | 29 | Pico → piezo | Digital, řádek GP22 |
+| Piezo HW-508 | – | GND | 28 | zem | Digital, řádek GP22 |
+| Piezo HW-508 | prostřední | nezapojen (NC) | – | – | – |
+| Tlačítko | vývod 1 | GP19 (pull-down) | 25 | tlačítko → Pico | Digital, řádek GP19 |
+| Tlačítko | vývod 2 | 3V3 OUT | 36 | napájení | Digital, řádek GP19 |
+
+
+
+
+
 ## Flowchart
 ![flowchart](./main-program-flowchart-v1.0.svg)
 
