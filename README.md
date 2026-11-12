@@ -29,24 +29,6 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - korekce měření pomocí teploměru BME 280
 - progress bar car on the side
 
-## PINS
-### Ultrasonic distance sensor HC-SR04:
-- VCC
-- Trig
-- Echo
-- GND
-
-### Buzzer HW-508 V0.2:
-- S (Signal)
-- VCC
-- GND
-
-### Display 128x64 SH1106 I2C OLED:
-- SDA
-- SCK
-- VCC
-- GND
-
 ## Funkce
 ### Sensor
 - v pravidelných intervalech snímá vzdálennost
@@ -65,7 +47,6 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 ### Button
 - zmáčknutí tlačítka se přepnou jednotky (metry/palce), toto se nahraje i na displej
 
-
 ## Work plan
 ### Week 1
 - block diagram with pinouts (Dominik)
@@ -81,7 +62,7 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ## Hardware design
 
-### Blokové schéma
+### Block scheme
 
 ![Blokové schéma](block_diagram.png)
 
@@ -89,7 +70,7 @@ Pico W sends a trigger pulse (Trig) to HC-SR04 at regular intervals and measures
 
 Calculation: speed of sound `c = 331.3 + 0.606 T` (m/s, T in °C), distance `d = t · c / 2` (t = length of the Echo pulse).
 
-### Schéma zapojení
+### Wiring diagram
 
 ![Schéma zapojení](wiring_diagram.png)
 
@@ -99,6 +80,12 @@ The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withs
 - R2 = 2 kΩ between GP21 and GND
 
 `U(GP21) = 5 V · 2 kΩ / (1 kΩ + 2 kΩ) = 3.33 V`
+
+- The board is powered via micro-USB.
+- HC-SR04 needs 5V, it takes it from VBUS (pin 40). VBUS has 5V only when powered from USB.
+- OLED, BME280 and button are powered from 3V3 OUT (pin 36).
+- All GNDs are common.
+
 
 ### Zapojení pinů
 
