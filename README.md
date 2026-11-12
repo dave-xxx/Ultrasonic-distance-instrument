@@ -98,13 +98,7 @@ The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withs
 - R1 = 1 kΩ between Echo and GP21
 - R2 = 2 kΩ between GP21 and GND
 
-`U(GP21) = 5 V · 2 kΩ / (1 kΩ + 2 kΩ) = 3.33 V`The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withstand a maximum of 3.3 V. Therefore, there is a resistor divider on a solderless field between Echo and GP21:
-
-- R1 = 1 kΩ between Echo and GP21
-- R2 = 2 kΩ between GP21 and GND
-
 `U(GP21) = 5 V · 2 kΩ / (1 kΩ + 2 kΩ) = 3.33 V`
-
 
 ### Zapojení pinů
 
