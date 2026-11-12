@@ -24,7 +24,10 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - v určitých metrech se zobrazí na displeji čára (jako obrubník) (threshold alarm)
 - v určitých metrech to začne pípat
 - přepínání jednotek vzdálenosti
+
+### Secondary features:
 - korekce měření pomocí teploměru BME 280
+- progress bar car on the side
 
 ## PINS
 ### Ultrasonic distance sensor HC-SR04:
