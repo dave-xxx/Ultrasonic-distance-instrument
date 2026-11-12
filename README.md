@@ -85,9 +85,9 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ![Blokové schéma](block_diagram.png)
 
-Pico W v pravidelném intervalu vyšle na HC-SR04 spouštěcí puls (Trig) a změří délku odezvy (Echo). Z délky pulzu a teploty z BME280 spočítá vzdálenost. Výsledek zobrazí na OLED displeji jako číslo a parkovací čáry a podle vzdálenosti mění rychlost pípání piezo bzučáku. Tlačítko přepíná jednotky metry / palce.
+Pico W sends a trigger pulse (Trig) to HC-SR04 at regular intervals and measures the response length (Echo). From the pulse length and temperature from BME280 it calculates the distance. It displays the result on the OLED display as a number and parking lines and changes the beeping speed of the piezo buzzer according to the distance. The button switches the units meters / inches.
 
-Výpočet: rychlost zvuku `c = 331,3 + 0,606 · T` (m/s, T ve °C), vzdálenost `d = t · c / 2` (t = délka pulzu Echo).
+Calculation: speed of sound `c = 331.3 + 0.606 T` (m/s, T in °C), distance `d = t · c / 2` (t = length of the Echo pulse).
 
 ### Schéma zapojení
 
