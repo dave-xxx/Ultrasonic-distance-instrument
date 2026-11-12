@@ -58,7 +58,8 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 ### Week 2
 - code for display (Vojta)
 - code for measure distance (David)
-- buzzer (Dominik)
+- code for buzzer (Dominik)
+- přetextovat readme (Vojta)
 
 ## Hardware design
 
