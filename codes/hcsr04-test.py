@@ -12,7 +12,7 @@ def main():
     try:
         while True:
             raw = sensor.get_distance()
-            acc = sensor.get_acc_distance(30.0, 1013.0, 77.0)
+            acc = sensor.get_acc_distance(20.0, 1013.0, 50.0)
             
             if raw is None or acc is None:
                 print("No echo / out of range")
