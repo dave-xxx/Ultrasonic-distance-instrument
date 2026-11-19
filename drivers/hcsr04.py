@@ -111,3 +111,4 @@ class HCSR04Measure:
         distance = (duration_us * speed_cm_us) / 2.0
         
         return distance
+
