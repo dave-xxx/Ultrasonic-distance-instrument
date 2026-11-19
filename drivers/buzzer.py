@@ -69,7 +69,7 @@ class ParkingBuzzer:
         self._next_ms = time.ticks_ms()
         self._pwm.duty_u16(0)
 
-    def set_distance(self, distance_cm):
+    def set_frequency(self, distance_cm):
         """
         Choose the beep pattern for a new distance.
 
@@ -141,7 +141,7 @@ def demo():
             if elapsed > 10_000:
                 break
             distance = 120 - 115 * elapsed / 10_000
-            buzzer.set_distance(distance)
+            buzzer.set_frequency(distance)
             buzzer.update()
             time.sleep_ms(5)
 
@@ -153,3 +153,4 @@ def demo():
 
 if __name__ == "__main__":
     demo()
+
