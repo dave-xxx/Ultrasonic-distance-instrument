@@ -6,7 +6,7 @@ from array import array
 def main():
     i2c = I2C(0, sda=Pin(4), scl=Pin(5), freq=100_000)
     oled = SH1106_I2C(i2c)
-    distance = 40
+    distance = 60
     unit_idx = 1
     
     oled.fill(0)
@@ -39,12 +39,16 @@ def main():
         oled.poly (0, 0, top_third, 1, True)
 
     # hodnota
-    oled.fill_rect(46, 24, 34, 16, 0) # prazdne pozadi (x = 63 - width/2)
-    if unit_idx == 0:
-        oled.text(f"{distance:.1f}",48 ,28, 1)
+    if distance <= 40:
+        if unit_idx == 0:
+            oled.text(f"{distance:.1f}",48 ,28, 0)
+        else:
+            oled.text(f"{distance / 2.54:.1f}",48 ,28, 0)
     else:
-        oled.text(f"{distance / 2.54:.1f}",48 ,28, 1)
-
+        if unit_idx == 0:
+            oled.text(f"{distance:.1f}",48 ,28, 1)
+        else:
+            oled.text(f"{distance / 2.54:.1f}",48 ,28, 1)
     
     # jednotka
     if unit_idx == 0:
