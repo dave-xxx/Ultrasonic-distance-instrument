@@ -7,45 +7,46 @@ or a simple parking-distance display.
 Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ## Team members:
-- David Latzka: flowchart
-- Dominik Pitrun: block diagram, pinouts
-- Vojtěch Smerekovský: Github editor
+- David Latzka
+- Dominik Pitrun
+- Vojtěch Smerekovský
 
 ## Electronic components:
 - Raspberry Pi Pico
 - OLED display
 - Ultrasonic-distance senzor
+- temperature, humidity and air pressure meter
 - buzzer/speaker
-- tlačítko na přepínání jednotek
+- button
 
 ## Features:
 - distance measure
 - parking display
-- v určitých metrech se zobrazí na displeji čára (jako obrubník) (threshold alarm)
-- v určitých metrech to začne pípat
-- přepínání jednotek vzdálenosti
+- at certain distances, a third of the parking camera lights up
+- at a certain distance, the buzzer starts to beep
+- switching between units of distance
 
 ### Secondary features:
-- korekce měření pomocí teploměru BME 280
+- correction of measurements using the BME 280 thermometer
 - progress bar car on the side
 
 ## Funkce
 ### Sensor
-- v pravidelných intervalech snímá vzdálennost
-- vzdálenost zapíše do proměnné
+- measures the distance at regular intervals
+- stores the distance in a variable
 
 ### Display
-- má rozsvícený display s čárami parking displeje
-- bere proměnnou o vzdálenosti a nechá ji vypsat na displej
-- upravuje vyplneni car podle vzdálenosti
-- místo pro zobrazení jednotek
+- its display is lit up and shows the parking display lines
+- takes a variable representing a distance and displays it on the screen
+- adjusts the filling of lines according to distance
+- the unit of distance (cm or inch) is shown in the top left-hand corner
 
 ### Bzucak
-- bere proměnnou o vzdálenosti a podle toho pípá 
-- upravuje rychlost pípání podle vzdálenosti
+- takes a variable representing the distance and beeps accordingly
+- adjusts the beeping speed according to distance
 
 ### Button
-- zmáčknutí tlačítka se přepnou jednotky (metry/palce), toto se nahraje i na displej
+- pressing the button switches the units (cm or inch)
 
 ## Work plan
 ### Week 1
@@ -53,13 +54,12 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - parking display (Vojtech)
 - drivers (Vojtech)
 - flowchart (David)
-- discord skupina (Vojtech)
 
 ### Week 2
 - code for display (Vojta)
 - code for measure distance (David)
 - code for buzzer (Dominik)
-- přetextovat readme (Vojta)
+- rewrite and translate the readme (Vojta)
 
 ## Hardware design
 
