@@ -1,7 +1,7 @@
 from buzzer import ParkingBuzzer
 from hcsr04 import HCSR04Measure
 from bme280 import BME280
-
+import time
 from machine import I2C, Pin
 
 def main():
@@ -29,16 +29,15 @@ def main():
                     f"Temperature: {temperature:.1f} C  "
                     f"Humidity: {humidity:.1f} %  "
                     f"Pressure: {pressure:.1f} hPa "
-                    f"Distance: {distance:.1f} units"
                 )
                 
             if time.ticks_diff(time.ticks_ms(), last_print) >= 200:
-                acc = sensor.get_acc_distance(temperature, pressure, humidity)
+                acc = hcsr04.get_acc_distance(temperature, pressure, humidity)
                 print(
-                    f"Distance: {distance:.1f} units"
+                    f"Distance: {acc:.1f} units"
                 )
             
-            buzzer.set_frequency(distance=acc)
+            buzzer.set_frequency(distance_cm=acc)
             buzzer.update()
 
     except KeyboardInterrupt:
