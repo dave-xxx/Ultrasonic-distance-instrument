@@ -6,7 +6,7 @@ def main():
     print("Press Ctrl+C to stop")
     
     display = ParkingDisplay()
-    display_init(i2c_id=0, sda=4, scl=5, freq=100_000):
+    display.display_init(i2c_id=0, sda=4, scl=5, freq=100_000):
 
 
     try:
