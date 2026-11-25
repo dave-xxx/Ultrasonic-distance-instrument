@@ -80,7 +80,7 @@ Calculation: speed of sound `c = 331.3 + 0.606 T` (m/s, T in °C), distance `d =
 
 ### Wiring diagram
 
-![Schéma zapojení](wiring_diagram.png)
+![Schéma zapojení](images/wiring_diagram.png)
 
 The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withstand a maximum of 3.3 V. Therefore, there is a resistor divider on a solderless field between Echo and GP21:
 
