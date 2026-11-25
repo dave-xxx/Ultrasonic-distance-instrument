@@ -1,3 +1,12 @@
+"""
+Author: David Latzka
+Description: Example script for testing an HC-SR04 ultrasonic distance sensor.
+             Initializes the sensor on GPIO pins 20 (TRIG) and 21 (ECHO),
+             continuously reads raw and environment-compensated distance
+             measurements every 0.5 seconds, and prints them until interrupted
+             with Ctrl+C.
+"""
+
 from hcsr04 import HCSR04Measure
 import time
 
