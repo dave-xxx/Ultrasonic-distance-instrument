@@ -72,7 +72,7 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 
 ### Block scheme
 
-![Blokové schéma](block_diagram.png)
+![Blokové schéma](images/block_diagram.png)
 
 Pico W sends a trigger pulse (Trig) to HC-SR04 at regular intervals and measures the response length (Echo). From the pulse length and temperature from BME280 it calculates the distance. It displays the result on the OLED display as a number and parking lines and changes the beeping speed of the piezo buzzer according to the distance. The button switches the units meters / inches.
 
