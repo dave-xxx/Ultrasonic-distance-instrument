@@ -1,23 +1,31 @@
 # Ultrasonic-distance-instrument
-Measure distance at a steady interval and show the result and a visual near/far indication.
+A MicroPython-based parking distance assistant built on the Raspberry Pi Pico W. The device continuously measures the distance to an obstacle using an HC-SR04 ultrasonic sensor with speed-of-sound compensation from a BME280 environmental sensor. 
 
-Add a threshold alarm, 
-peak/minimum tracking, 
-or a simple parking-distance display. 
-Check the sensor's echo voltage and use a divider or level shifter if required.
+The measured value is shown on an SH1106 OLED screen styled like a reversing camera (displaying the numeric distance, active unit, and three progressive proximity segments), accompanied by a piezo buzzer whose beeping rate increases as the obstacle gets closer. A push button allows switching between centimeters (`cm`) and inches (`inch`).
+
+## Table of Contents
+- [Team members](#team-members)
+- [Electronic components](#electronic-components)
+- [Features](#features)
+- [Functions](#functions)
+- [Software & Repository structure](#software--repository-structure)
+- [Work plan](#work-plan)
+- [Hardware design](#hardware-design)
+- [Flowchart](#flowchart)
+- [References](#references)
 
 ## Team members:
 - David Latzka
 - Dominik Pitrun
 - Vojtěch Smerekovský
 
-## Electronic components:
-- Raspberry Pi Pico
-- OLED display
-- Ultrasonic-distance senzor
-- temperature, humidity and air pressure meter
-- buzzer
-- button
+## Electronic components
+- Raspberry Pi Pico W
+- OLED display (SH1106, I2C)
+- Ultrasonic distance sensor (HC-SR04)
+- Temperature, humidity, and pressure sensor (BME280)
+- Buzzer (HW-508)
+- Push button
 
 ## Features:
 - distance measure
@@ -31,22 +39,45 @@ Check the sensor's echo voltage and use a divider or level shifter if required.
 - progress bar car on the side
 
 ## Functions
-### Sensor
+### Sensor – [`drivers/hcsr04.py`](drivers/hcsr04.py) & [`drivers/bme280.py`](drivers/bme280.py)
 - measures the distance at regular intervals
+- compensates the speed of sound using temperature/humidity from the BME280
 - stores the distance in a variable
 
-### Display
-- its display is lit up and shows the parking display lines
-- takes a variable representing a distance and displays it on the screen
-- adjusts the filling of lines according to distance
-- the unit of distance (cm or inch) is shown in the top left-hand corner
+### Display – [`drivers/update_display.py`](drivers/update_display.py) & [`drivers/sh1106.py`](drivers/sh1106.py)
+- shows the parking display guide lines and measured distance
+- fills the proximity thirds according to the distance
+- displays the active unit (`CM` or `INCH`) in the top-left corner
 
-### Buzzer
+### Buzzer – [`drivers/buzzer.py`](drivers/buzzer.py)
 - takes a variable representing the distance and beeps accordingly
 - adjusts the beeping speed according to distance
 
-### Button
-- pressing the button switches the units (cm or inch)
+### Button – [`drivers/debouncer`](drivers/debouncer)
+- pressing the button switches the displayed units (`cm` or `inch`)
+
+## Software & Repository structure
+
+The project is split into modular class-based drivers, standalone component test scripts, and a main application script:
+
+- **[`main.py`](main.py)** – Main application integrating all modules, sensor measurements, display updates, buzzer control, and unit switching.
+
+### Drivers & Classes ([`drivers/`](drivers/))
+Refactored object-oriented modules and hardware libraries used by `main.py`:
+- [`drivers/hcsr04.py`](drivers/hcsr04.py) – Ultrasonic distance sensor class (`HCSR04Measure`) with temperature/humidity compensation.
+- [`drivers/update_display.py`](drivers/update_display.py) – Parking display interface class (drawing guide lines, filled thirds, value, and unit icons).
+- [`drivers/sh1106.py`](drivers/sh1106.py) – Low-level I2C driver for the SH1106 OLED display.
+- [`drivers/buzzer.py`](drivers/buzzer.py) – Piezo buzzer control class (PWM beeping intervals based on distance).
+- [`drivers/bme280.py`](drivers/bme280.py) – Driver for the BME280 temperature, humidity, and pressure sensor.
+- [`drivers/gpio_devices.py`](drivers/gpio_devices.py) – Helper module for GPIO peripherals.
+- [`drivers/debouncer`](drivers/debouncer) – Button debouncing module.
+
+### Standalone Component Tests ([`codes/`](codes/))
+Individual test scripts created during development to verify each component separately:
+- [`codes/hcsr04-test.py`](codes/hcsr04-test.py) – Ultrasonic sensor test script.
+- [`codes/update_display.py`](codes/update_display.py) / [`codes/sh1106-test.py`](codes/sh1106-test.py) – OLED display and graphics test scripts.
+- [`codes/buzzer-test.py`](codes/buzzer-test.py) – Piezo buzzer test script.
+- [`codes/main-test.py`](codes/main-test.py) – Integration test script.
 
 ## Work plan
 ### Week 1
@@ -122,3 +153,10 @@ The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withs
 
 ## Oled display
 ![reverse camera filled](images/reverse_camera_filled.png)
+
+## References
+- [Raspberry Pi Pico W Documentation](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)
+- [MicroPython Documentation](https://docs.micropython.org/en/latest/)
+- [HC-SR04 Ultrasonic Sensor Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+- [BME280 Environmental Sensor Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf)
+- [SH1106 OLED Driver Datasheet](https://www.velleman.eu/downloads/29/infosheets/sh1106_datasheet.pdf)
