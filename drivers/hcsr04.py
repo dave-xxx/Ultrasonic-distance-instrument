@@ -1,3 +1,10 @@
+"""
+Author: David Latzka
+Description: MicroPython driver module providing the HCSR04Measure class for
+             reading raw and temperature/humidity-compensated distances in
+             centimeters from an HC-SR04 ultrasonic sensor.
+"""
+
 from machine import Pin, time_pulse_us
 from utime import sleep_us
 
