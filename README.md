@@ -118,7 +118,7 @@ The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withs
 | Button | pin 2 | 3V3 OUT | 36 | power | Digital, GP19 row |
 
 ## Flowchart
-![flowchart](./main-program-flowchart-v1.0.svg)
+![flowchart](images/main-program-flowchart-v1.0.svg)
 
 ## Oled display
-![reverse camera filled](./reverse_camera_filled.png)
+![reverse camera filled](images/reverse_camera_filled.png)
