@@ -52,17 +52,19 @@ def main():
             if time.ticks_diff(now, last_bme280) >= 5000:
                 last_bme280 = now
                 temperature, humidity, pressure, _ = bme280.read_values()
+                """
                 print(
                     f"Temperature: {temperature:.1f} C  "
                     f"Humidity: {humidity:.1f} %  "
                     f"Pressure: {pressure:.1f} hPa "
                 )
+                """
 
             if time.ticks_diff(now, last_hcsr04) >= 60:
                 last_hcsr04 = now
                 acc = hcsr04.get_acc_distance(temperature, pressure, humidity)
                 if acc is not None:
-                    print(f"Distance: {acc:.1f} cm")
+                    print()
 
             if time.ticks_diff(now, last_draw) >= 100 or force_draw:
                 last_draw = now
