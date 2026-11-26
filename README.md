@@ -93,11 +93,21 @@ Individual test scripts created during development to verify each component sepa
 - rewrite and translate the readme (Vojta)
 
 ### Week 3
-- remake codes into classes (all)
+- remake codes into classes (everyone)
 - translate to english (Hardware design and minor things)
 - legend for different lines in Block scheme (Dominik)
 - timing in Flowchart (David)
 - links in README (Vojta)
+
+### Week 4 (current)
+- test all codes together with main.py
+- video of how it works?
+- translate comments in codes to english (everyone)
+- add more comments into codes (everyone)
+
+### Week 5
+- everything have to work
+- make poster (?)
 
 ## Hardware design
 
