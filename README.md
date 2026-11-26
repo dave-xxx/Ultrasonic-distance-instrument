@@ -103,7 +103,7 @@ Individual test scripts created during development to verify each component sepa
 
 ### Block scheme
 
-![Blokové schéma](images/block_diagram.png)
+![Blokové schéma](images/block_diagram_new.png)
 
 Pico W sends a trigger pulse (Trig) to HC-SR04 at regular intervals and measures the response length (Echo). From the pulse length and temperature from BME280 it calculates the distance. It displays the result on the OLED display as a number and parking lines and changes the beeping speed of the piezo buzzer according to the distance. The button switches the units meters / inches.
 
@@ -111,7 +111,7 @@ Calculation: speed of sound `c = 331.3 + 0.606 T` (m/s, T in °C), distance `d =
 
 ### Wiring diagram
 
-![Schéma zapojení](images/wiring_diagram.png)
+![Schéma zapojení](images/wiring_diagram_new.png)
 
 The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withstand a maximum of 3.3 V. Therefore, there is a resistor divider on a solderless field between Echo and GP21:
 
