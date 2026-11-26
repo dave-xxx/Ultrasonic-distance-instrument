@@ -165,11 +165,9 @@ The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withs
 ![reverse camera filled](images/reverse_camera_filled.png)
 
 ## References
-todo
-<!--
-- [Raspberry Pi Pico W Documentation](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)
-- [MicroPython Documentation](https://docs.micropython.org/en/latest/)
+<!-- - [Raspberry Pi Pico W Documentation](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)
+- [MicroPython Documentation](https://docs.micropython.org/en/latest/) -->
 - [HC-SR04 Ultrasonic Sensor Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
-- [BME280 Environmental Sensor Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf)
-- [SH1106 OLED Driver Datasheet](https://www.velleman.eu/downloads/29/infosheets/sh1106_datasheet.pdf)
--->
+- [BME280 Environmental Sensor Datasheet](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs/-/blob/main/examples/_modules/bme280.py?ref_type=heads)
+- [SH1106 OLED Driver Datasheet](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs/-/blob/main/examples/_modules/sh1106.py?ref_type=heads)
+
