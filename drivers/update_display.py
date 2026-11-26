@@ -95,8 +95,8 @@ class ParkingDisplay:
         self._draw_frame()
 
         if distance is None:
-            # Pokud senzor nedostal odezvu
-            self.oled.text("---", 52, 28, 1)
+            text = "---"
+            text_color = 1
         else:
             # Vybarvení třetin podle vzdálenosti v cm
             if distance <= 70:
@@ -108,12 +108,15 @@ class ParkingDisplay:
 
             # Výpočet hodnoty a barvy textu (invertovaná při vybarveném středu)
             value = distance if unit_idx == 0 else distance / 2.54
+            text = f"{value:.1f}"
             text_color = 0 if distance <= 40 else 1
-            self.oled.text(f"{value:.1f}", 48, 28, text_color)
+
+        # Vycentrování textu na šířku displeje (128 px, 1 znak = 8 px)
+        text_x = (128 - len(text) * 8) // 2
+        self.oled.text(text, text_x, 28, text_color)
 
         self._draw_unit(unit_idx)
         self.oled.show()
-
 
     def clear(self):
         """Clears the OLED display."""
