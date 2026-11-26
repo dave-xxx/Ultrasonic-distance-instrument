@@ -168,6 +168,6 @@ The Echo output has a level of 5 V, but the Pico Micro-controller GPIO can withs
 <!-- - [Raspberry Pi Pico W Documentation](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)
 - [MicroPython Documentation](https://docs.micropython.org/en/latest/) -->
 - [HC-SR04 Ultrasonic Sensor Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
-- [BME280 Environmental Sensor Datasheet](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs/-/blob/main/examples/_modules/bme280.py?ref_type=heads)
-- [SH1106 OLED Driver Datasheet](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs/-/blob/main/examples/_modules/sh1106.py?ref_type=heads)
+- [BME280 Environmental Sensor module](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs/-/blob/main/examples/_modules/bme280.py?ref_type=heads)
+- [SH1106 OLED Driver module](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs/-/blob/main/examples/_modules/sh1106.py?ref_type=heads)
 
